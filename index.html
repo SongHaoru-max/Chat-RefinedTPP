@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Chat-RefinedTPP, a local research workspace for TMT-based Refined-TPP analysis.">
+<title>Chat-RefinedTPP — Local Refined-TPP analysis</title>
+<style>
+:root{color-scheme:light;--paper:#f7f6f1;--ink:#14263a;--muted:#526477;--rule:#d9e0e3;--blue:#1550ad;--navy:#11293f;--ice:#e8f1fa;--gold:#f5ca77;--mono:ui-monospace,Consolas,monospace}*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:94px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 "Segoe UI",system-ui,sans-serif}a{color:var(--blue);text-underline-offset:4px}button,input{font:inherit}button{cursor:pointer}a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #e19524;outline-offset:4px}
+.wrap{width:min(1160px,calc(100% - 64px));margin:auto}.bar{border-bottom:1px solid var(--rule);background:var(--paper)}.bar .wrap{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);font-weight:750;white-space:nowrap}.brand img{width:40px;height:40px;border-radius:8px;border:1px solid var(--rule)}nav{display:flex;gap:24px;align-items:center;flex-wrap:wrap}nav a{color:var(--ink);font-size:.89rem;text-decoration:none}nav a:hover{text-decoration:underline}.github{border:1px solid var(--rule);padding:7px 12px;border-radius:5px}
+.hero{padding:78px 0 64px}.hero .wrap{display:grid;grid-template-columns:1.12fr 1fr;gap:64px;align-items:center}.eyebrow{font:650 .73rem/1.5 var(--mono);letter-spacing:.15em;text-transform:uppercase;color:var(--blue);margin:0 0 15px}.eyebrow:before{content:"";display:inline-block;width:20px;height:2px;background:currentColor;vertical-align:middle;margin-right:9px}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:normal;line-height:1.05;letter-spacing:-.04em;margin:0}h1{font-size:clamp(3rem,6vw,5.6rem)}h1 span{color:#1c56a8}.lede{font-size:1.15rem;line-height:1.65;color:var(--muted);max-width:53ch;margin:23px 0 15px}.credit{font-size:.91rem;margin:0 0 25px}.actions{display:flex;flex-wrap:wrap;gap:12px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;padding:10px 16px;border-radius:5px;border:1px solid var(--rule);text-decoration:none;color:var(--ink);font-weight:650;background:transparent;font-size:.9rem;min-height:45px}.btn:hover{background:var(--ice)}.primary{background:var(--blue);color:white;border-color:var(--blue)}.primary:hover{background:#103d83}.fine{font-size:.83rem;color:var(--muted)}.hero .fine{margin:14px 0 0}
+.plate{background:var(--navy);color:white;border-radius:14px;padding:26px 28px 20px;box-shadow:0 16px 36px #152d431c;position:relative;overflow:hidden}.plate:before{content:"";position:absolute;inset:0;background-image:radial-gradient(#b8d4ed23 1px,transparent 1px);background-size:18px 18px;mask-image:linear-gradient(to bottom right,transparent 5%,black 70%);pointer-events:none}.plate>*{position:relative}.plate-top{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #547089;padding-bottom:12px;color:#c9dcee;font: .72rem var(--mono);letter-spacing:.09em}.plate-top b{color:var(--gold)}.stage{display:grid;grid-template-columns:34px 1fr;column-gap:14px;padding:12px 0;align-items:start}.stage .num{border:1px solid #7394ae;color:#dbeaf7;font:.72rem var(--mono);border-radius:50%;height:29px;width:29px;display:grid;place-items:center;margin-top:2px}.stage strong{font-size:.96rem}.stage p{color:#bfd4e6;margin:2px 0 0;font-size:.83rem}.stage+.stage{border-top:1px dashed #4d6c87}.branches{display:flex;gap:6px;margin:8px 0 0;flex-wrap:wrap}.branches span{font:.7rem var(--mono);border-radius:4px;padding:5px 8px;background:#233f5b;color:#dfedfa}.plate-foot{display:flex;align-items:center;gap:8px;padding-top:10px;color:#c8ddec;border-top:1px solid #547089;font-size:.74rem}.plate-foot i{background:#9bd6c3;width:8px;height:8px;border-radius:50%}
+.strip{border-block:1px solid var(--rule);background:#eeeee7}.strip .wrap{display:flex;align-items:center;gap:12px 30px;flex-wrap:wrap;padding-block:13px;font-size:.83rem;color:var(--muted)}.strip b{color:var(--ink)}.strip a{margin-left:auto}.section{padding:68px 0;border-bottom:1px solid var(--rule)}h2{font-size:clamp(2rem,3.5vw,3.4rem)}.intro{color:var(--muted);max-width:62ch;margin:15px 0 24px}.cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}.box{background:#fffefa;border:1px solid var(--rule);border-radius:9px;padding:23px 24px}.box h3{margin:4px 0;font-size:1.24rem}.box p{color:var(--muted);margin:8px 0 0}.tag{font:.72rem var(--mono);font-weight:700;letter-spacing:.06em;color:var(--blue);background:var(--ice);border-radius:4px;padding:4px 7px}.media{display:grid;grid-template-columns:1fr 1.22fr;gap:52px;align-items:center}.poster{min-height:236px;border:1px solid #becfdd;border-radius:10px;background:linear-gradient(135deg,#e8f0f8,#d7e5ee);display:grid;place-items:center;padding:20px;text-align:center}.poster button{border:0;background:var(--navy);color:#fff;border-radius:50%;width:66px;height:66px;font-size:1.3rem;box-shadow:0 4px 12px #162a3d28}.poster button:hover{background:var(--blue)}.poster p{margin:.65em 0 0;font-weight:650}.poster .fine{display:block;font-weight:400}
+.resource-row{border-top:1px solid var(--rule);display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 0}.resource-row:last-child{border-bottom:1px solid var(--rule)}.resource-row p{margin:0;color:var(--muted);font-size:.9rem}.resource-row a,.resource-row button{flex-shrink:0}.textbtn{background:none;border:0;padding:4px 0;color:var(--blue);text-decoration:underline;text-underline-offset:4px}
+.news{display:grid;grid-template-columns:1.4fr 1fr;gap:50px;align-items:start}details{border-top:1px solid var(--rule);padding:14px 0}details:last-child{border-bottom:1px solid var(--rule)}summary{cursor:pointer;font-weight:650}details p{color:var(--muted);margin:8px 0 4px}summary time{color:var(--muted);display:block;font:.72rem var(--mono);margin-bottom:6px}.subscribe{background:var(--ice);border-color:#c2d4e4}.subscribe .btn{margin-top:14px}
+footer{padding:31px 0 40px;color:var(--muted);font-size:.85rem}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+dialog{background:var(--paper);border:1px solid var(--rule);border-radius:12px;width:min(760px,calc(100% - 30px));padding:26px;color:var(--ink);box-shadow:0 12px 55px #0004}dialog::backdrop{background:#0e243bcc}dialog h2{font-size:2.1rem;margin-right:32px}dialog p{color:var(--muted)}dialog .close{position:absolute;right:16px;top:14px;font-size:1.3rem;background:transparent;border:1px solid var(--rule);border-radius:4px;width:36px;height:36px}video{width:100%;max-height:55vh;background:#111;border-radius:7px;margin:8px 0}video[hidden]{display:none}label[for="videoFile"]{display:block;font-weight:650;margin-bottom:8px}input[type=file]{max-width:100%}code{font-family:var(--mono);font-size:.88em;overflow-wrap:anywhere}
+@media(max-width:840px){.wrap{width:calc(100% - 40px)}.bar .wrap{padding:14px 0;align-items:flex-start;flex-direction:column;gap:10px}nav{gap:12px 18px}.hero{padding:48px 0}.hero .wrap,.media,.news{grid-template-columns:1fr;gap:28px}.section{padding:45px 0}.strip a{margin-left:0}}
+@media(max-width:500px){.cols{grid-template-columns:1fr}.hero h1{font-size:2.8rem}.plate{padding:20px}.resource-row{align-items:flex-start}.strip .wrap{gap:8px 14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Public aggregate statistics */
+.stats{margin-top:24px;padding:24px;background:var(--ice);border:1px solid #c2d4e4;border-radius:9px}
+.stats h3,.affiliations h3{margin:0 0 4px;font-size:1.12rem}
+.stats .fine,.affiliations .fine{margin:0}
+.stats dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:18px 0 0}
+.stats .metric{border-left:1px solid #c2d4e4;padding:0 16px}
+.stats .metric:first-child{border-left:0;padding-left:0}
+.stats dt{font-size:.9rem;font-weight:650}.stats dd{margin:5px 0 0;font:normal 2rem/1 Georgia,serif;color:var(--blue)}
+.stats small{display:block;margin-top:7px;color:var(--muted);font:400 .78rem/1.5 "Segoe UI",system-ui,sans-serif}
+.affiliations{margin:14px 0 0;padding:24px;background:#fffefa;border:1px solid var(--rule);border-radius:9px}
+.affiliations figcaption{display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap}
+.affiliations .tag{align-self:flex-start;white-space:nowrap}
+.affiliation-chart{display:grid;grid-template-columns:minmax(145px,210px) minmax(0,1fr);gap:26px;align-items:center;margin:19px 0}
+.donut{width:146px;aspect-ratio:1;position:relative;border-radius:50%;margin:auto;display:grid;place-items:center;background:conic-gradient(#1c56a8 0 45%,#5088b7 45% 75%,#699e91 75% 90%,#afbac4 90% 100%)}
+.donut::before{content:"";position:absolute;inset:23%;background:#fffefa;border-radius:50%}
+.donut strong{position:relative;color:var(--ink);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase}
+.affiliation-legend{list-style:none;margin:0;padding:0;font-size:.88rem}
+.affiliation-legend li{display:grid;grid-template-columns:12px minmax(0,1fr) auto;align-items:center;gap:10px;padding:6px 0}
+.affiliation-legend li+li{border-top:1px solid var(--rule)}
+.affiliation-legend i{width:10px;height:10px;border-radius:2px;background:var(--slice)}
+.affiliation-legend strong{font-variant-numeric:tabular-nums;white-space:nowrap}
+@media(max-width:590px){.stats dl{grid-template-columns:1fr;gap:12px}.stats .metric{padding:12px 0 0;border-left:0;border-top:1px solid #c2d4e4}.affiliation-chart{grid-template-columns:1fr;gap:15px}}
+
+.trend-chart{display:block;width:100%;height:auto;max-width:760px;margin:14px auto 4px;overflow:visible}
+.trend-chart text{fill:var(--muted);font:13px "Segoe UI",system-ui,sans-serif}
+.trend-chart .point-label{fill:#173e72;font-weight:700}
+.trend-chart line{stroke:#d9e0e3;stroke-width:1}
+.trend-chart polyline{fill:none;stroke:#1c56a8;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.trend-chart circle{fill:#fffefa;stroke:#1c56a8;stroke-width:2.5}
+@media(max-width:590px){.trend-chart text{font-size:16px}}
+</style>
+</head>
+<body>
+<header class="bar"><div class="wrap">
+<a class="brand" href="#home"><img src="data:image/webp;base64,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" alt="">Chat-RefinedTPP</a>
+<nav aria-label="Main navigation"><a href="#download">Download</a><a href="#docs">Docs</a><a href="#research">Research</a><a href="#news">News</a><a class="github" href="https://github.com/SongHaoru-max/Chat-RefinedTPP">GitHub ↗</a></nav>
+</div></header>
+<main id="home">
+<section class="hero"><div class="wrap">
+<div><p class="eyebrow">Research software · local analysis</p><h1>Chat-<span>RefinedTPP</span></h1>
+<p class="lede">A local workspace for analyzing TMT-based Refined-TPP data, from experimental design to quality control and traceable results.</p>
+<p class="credit">Developed and maintained by <strong>Haoru Song (宋昊儒)</strong>.</p>
+<div class="actions"><a class="btn primary" href="#download">↓ Download &amp; setup</a><a class="btn" href="#demo">▷ Demo video</a></div>
+<p class="fine">A task-specific agent harness for TMT-based Refined-TPP research.</p></div>
+<aside class="plate" aria-label="Analysis workflow overview">
+<div class="plate-top"><span>WORKFLOW OVERVIEW</span><b>FIG. 01</b></div>
+<div class="stage"><span class="num">01</span><div><strong>Describe your experiment</strong><p>Specify conditions, replicates and available inputs.</p></div></div>
+<div class="stage"><span class="num">02</span><div><strong>Review the suggested route</strong><p>Check the file mapping and confirm the analysis plan.</p><div class="branches"><span>P2 / Protein</span><span>G2 / Site Group</span></div></div></div>
+<div class="stage"><span class="num">03</span><div><strong>Run the analysis locally</strong><p>The selected pipeline computes QC and statistical results.</p></div></div>
+<div class="stage"><span class="num">04</span><div><strong>Inspect the evidence</strong><p>Trace report claims back to run settings, tables and figures.</p></div></div>
+<div class="plate-foot"><i></i> Experimental files are processed on your computer.</div>
+</aside></div></section>
+<div class="strip"><div class="wrap"><b>Project website</b><span>v0.4.2-fix3 Demo</span><span>v0.5.0 under validation</span><a href="#news">Read project updates ↗</a></div></div>
+
+<section class="section" id="demo"><div class="wrap media">
+<div><p class="eyebrow">01 / Demonstration</p><h2>See the local workspace</h2><p class="intro">The walkthrough will show how an experimental design becomes an analysis report in the local app.</p><p class="fine">The promotional video will be available here once published.</p></div>
+<div class="poster"><div><button aria-label="Demo video pending publication" disabled>▶</button><p>Chat-RefinedTPP walkthrough</p><span class="fine">Video pending publication</span></div></div>
+</div></section>
+
+<section class="section" id="workflows"><div class="wrap">
+<p class="eyebrow">02 / Scientific workflows</p><h2>Choose your unit of analysis</h2><p class="intro">Both workflows preserve the run settings and link results to their evidence. The Agent helps with setup and interpretation; the pipeline performs the calculations.</p>
+<div class="cols">
+<article class="box"><span class="tag">P2</span><h3>Protein-level analysis</h3><p>Compare treatment and Vehicle with protein quantification input. Explore QC and changes in ΔRm at the PQE level.</p></article>
+<article class="box"><span class="tag">G2</span><h3>N-glycosite analysis</h3><p>Use protein, enriched peptide and sequence inputs to examine Site Groups and their matched protein reference evidence.</p></article>
+</div></div></section>
+
+<section class="section" id="download"><div class="wrap">
+<p class="eyebrow">03 / Distribution</p><h2>Download &amp; install</h2><p class="intro">Chat-RefinedTPP runs locally. Public downloads will be listed here when released.</p>
+<div class="cols">
+<article class="box"><span class="tag">DEMO</span><h3>v0.4.2-fix3</h3><p>The original demonstration build. Windows setup requires a user-installed Python 3.12.x.</p><p><button class="textbtn" data-dialog="downloadDialog">View Demo details ↗</button></p></article>
+<article class="box"><span class="tag">VALIDATION BUILD</span><h3>v0.5.0</h3><p>Improved Agent context, report history and run comparison. Requires a user-installed Python 3.12 or later. Stable release pending acceptance.</p></article>
+</div>
+<aside class="stats" aria-labelledby="stats-title">
+  <div><h3 id="stats-title">Project activity</h3><p class="fine">Live counts pending</p></div>
+  <dl>
+    <div class="metric"><dt>Website visitors</dt><dd><span aria-label="Not yet available">—</span><small>Estimated unique visitors · last 30 days</small></dd></div>
+    <div class="metric"><dt>Release downloads</dt><dd><span aria-label="Not yet available">—</span><small>Cumulative installer downloads</small></dd></div>
+    <div class="metric"><dt>Confirmed subscribers</dt><dd><span aria-label="Not yet available">—</span><small>Active email subscriptions</small></dd></div>
+  </dl>
+</aside>
+<figure class="affiliations" aria-labelledby="affiliations-title">
+  <figcaption><div><h3 id="affiliations-title">Subscriber affiliations</h3><p class="fine">Institutions voluntarily shared for public aggregate reporting.</p></div><span class="tag">ILLUSTRATIVE DATA</span></figcaption>
+  <div class="affiliation-chart">
+    <div class="donut" aria-hidden="true"><strong>Example</strong></div>
+    <ul class="affiliation-legend" aria-label="Illustrative affiliation distribution">
+      <li><i style="--slice:#1c56a8"></i><span>University A</span><strong>45%</strong></li>
+      <li><i style="--slice:#5088b7"></i><span>University B</span><strong>30%</strong></li>
+      <li><i style="--slice:#699e91"></i><span>Research Institute C</span><strong>15%</strong></li>
+      <li><i style="--slice:#afbac4"></i><span>Other institutions</span><strong>10%</strong></li>
+    </ul>
+  </div>
+  <p class="fine">Fictional institutions and percentages. Live figures will use confirmed subscribers who opt in to share their affiliation. Small groups will be combined; names and email addresses will not be displayed.</p>
+</figure>
+
+<figure class="affiliations" aria-labelledby="subscriber-trend-title">
+  <figcaption><div><h3 id="subscriber-trend-title">Subscriber trend</h3><p class="fine">Confirmed, active subscribers at the end of each month.</p></div><span class="tag">ILLUSTRATIVE DATA</span></figcaption>
+  <svg class="trend-chart" viewBox="0 0 560 184" role="img" aria-labelledby="trend-svg-title trend-svg-desc">
+    <title id="trend-svg-title">Example monthly subscriber trend</title>
+    <desc id="trend-svg-desc">Fictional counts for months 1 to 6: 8, 13, 17, 16, 22 and 26 confirmed active subscribers.</desc>
+    <line x1="56" x2="536" y1="148" y2="148"/><text x="43" y="152" text-anchor="end">0</text><line x1="56" x2="536" y1="108" y2="108"/><text x="43" y="112" text-anchor="end">10</text><line x1="56" x2="536" y1="68" y2="68"/><text x="43" y="72" text-anchor="end">20</text><line x1="56" x2="536" y1="28" y2="28"/><text x="43" y="32" text-anchor="end">30</text>
+    <polygon points="56,148 56,116 152,96 248,80 344,84 440,60 536,44 536,148" fill="#e8f1fa"/>
+    <polyline points="56,116 152,96 248,80 344,84 440,60 536,44"/>
+    <circle cx="56" cy="116" r="4"><title>Month 1: 8 subscribers</title></circle><text class="point-label" x="56" y="105" text-anchor="middle">8</text><circle cx="152" cy="96" r="4"><title>Month 2: 13 subscribers</title></circle><text class="point-label" x="152" y="85" text-anchor="middle">13</text><circle cx="248" cy="80" r="4"><title>Month 3: 17 subscribers</title></circle><text class="point-label" x="248" y="69" text-anchor="middle">17</text><circle cx="344" cy="84" r="4"><title>Month 4: 16 subscribers</title></circle><text class="point-label" x="344" y="73" text-anchor="middle">16</text><circle cx="440" cy="60" r="4"><title>Month 5: 22 subscribers</title></circle><text class="point-label" x="440" y="49" text-anchor="middle">22</text><circle cx="536" cy="44" r="4"><title>Month 6: 26 subscribers</title></circle><text class="point-label" x="536" y="33" text-anchor="middle">26</text>
+    <text x="56" y="173" text-anchor="middle">M1</text><text x="152" y="173" text-anchor="middle">M2</text><text x="248" y="173" text-anchor="middle">M3</text><text x="344" y="173" text-anchor="middle">M4</text><text x="440" y="173" text-anchor="middle">M5</text><text x="536" y="173" text-anchor="middle">M6</text>
+  </svg>
+  <p class="fine">Illustrative counts. The published trend will use monthly totals and can fall when readers unsubscribe.</p>
+</figure>
+</div></section>
+
+<section class="section" id="docs"><div class="wrap">
+<p class="eyebrow">04 / Documentation</p><h2>Use it. Understand it.</h2><p class="intro">Start with the workflow, then look under the hood when you need to extend it.</p>
+<div class="resource-row"><div><strong>Quick Start</strong><p>Installation, model configuration and the first run.</p></div><button class="textbtn" data-dialog="quickDialog">Read ↗</button></div>
+<div class="resource-row"><div><strong>Developer Guide</strong><p>Follow a request from Agent instructions and tools to the fixed analysis pipeline.</p></div><button class="textbtn" data-dialog="devDialog">Read ↗</button></div>
+</div></section>
+
+<section class="section" id="research"><div class="wrap">
+<p class="eyebrow">05 / Research</p><h2>Research &amp; citation</h2><p class="intro">Record the software version used in your analysis. Cite the original Refined-TPP method separately from the software platform.</p>
+<div class="resource-row"><div><strong>Refined-TPP method</strong><p>Original method reference in the Journal of the American Chemical Society.</p></div><a href="https://doi.org/10.1021/jacs.5c08065">Read paper ↗</a></div>
+<div class="resource-row"><div><strong>Software citation</strong><p>Chat-RefinedTPP · Haoru Song · include the exact version used.</p></div><button class="textbtn" data-dialog="citeDialog">Citation details ↗</button></div>
+</div></section>
+
+<section class="section" id="news"><div class="wrap news">
+<div><p class="eyebrow">06 / Project updates</p><h2>News</h2><p class="intro">Read updates here without signing up.</p>
+<details open><summary><time datetime="2026-11-06">NOV 2026 · DEVELOPMENT UPDATE</time>v0.5.0 validation</summary><p>Testing the updated local package, Agent scope rules and report workflow before the first stable release.</p></details>
+<details><summary><time>NOV 2026 · DEMO</time>Original Demo baseline</summary><p>v0.4.2-fix3 remains the demonstration baseline. This baseline is distinct from the v0.5.0 validation build.</p></details></div>
+<aside class="box subscribe" id="subscribe"><span class="tag">EMAIL UPDATES</span><h3>Follow the project</h3><p>Get occasional announcements about releases and publications. Subscription is optional and requires email confirmation.</p><button class="btn" data-dialog="subscribeDialog">Subscribe ↗</button><p class="fine">Email subscriptions are pending.</p></aside>
+</div></section>
+</main>
+<footer><div class="wrap"><span>Chat-RefinedTPP · Developed by Haoru Song (宋昊儒)</span><span><a href="#research">Citation</a> · <a href="#news">News</a> · <a href="https://github.com/SongHaoru-max/Chat-RefinedTPP">GitHub</a></span></div></footer>
+
+<dialog id="downloadDialog" aria-labelledby="downloadTitle"><button class="close" aria-label="Close">×</button><h2 id="downloadTitle">v0.4.2-fix3 Demo</h2><p>The Demo installer is pending public release. A versioned download link will appear here when available.</p><p>On Windows, prepare Python 3.12.x, unpack the Demo, run <code>setup.bat</code> and then <code>start.bat</code>.</p></dialog>
+<dialog id="quickDialog" aria-labelledby="quickTitle"><button class="close" aria-label="Close">×</button><h2 id="quickTitle">Quick Start</h2><ol><li>Install the Python version required by your release.</li><li>Unpack the release and run the setup script.</li><li>Start the local app. Model configuration is optional for scientific analysis.</li><li>Describe the design, upload the required files, review the plan and confirm the run.</li></ol></dialog>
+<dialog id="devDialog" aria-labelledby="devTitle"><button class="close" aria-label="Close">×</button><h2 id="devTitle">Developer Guide</h2><p>The local backend supplies scoped Agent instructions and validated tools. Approved runs use fixed analysis code; reports read the resulting files and run metadata.</p><p>The published guide will link to source entry points for the Agent, execution, and reports.</p></dialog>
+<dialog id="citeDialog" aria-labelledby="citeTitle"><button class="close" aria-label="Close">×</button><h2 id="citeTitle">Cite the software</h2><p>Haoru Song. <em>Chat-RefinedTPP</em> [software]. Include the version you ran and its release URL when available. Platform paper details will be added after public release.</p></dialog>
+<dialog id="subscribeDialog" aria-labelledby="subTitle"><button class="close" aria-label="Close">×</button><h2 id="subTitle">Subscribe to updates</h2><p>Email subscriptions will use a confirmation form when available. Submitting an address triggers a confirmation email; only a confirmed address joins the list. Sharing an institutional affiliation for the public chart will be optional. Each newsletter includes an unsubscribe link.</p><p>Email subscriptions are currently unavailable.</p></dialog>
+<script>
+ for (const button of document.querySelectorAll('[data-dialog]')) {
+   button.addEventListener('click', () => document.getElementById(button.dataset.dialog).showModal());
+ }
+ for (const dialog of document.querySelectorAll('dialog')) {
+   dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+ }
+</script>
+</body>
+</html>
