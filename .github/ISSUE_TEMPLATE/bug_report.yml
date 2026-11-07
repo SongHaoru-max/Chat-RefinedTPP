@@ -1,0 +1,69 @@
+name: Bug report
+description: Report a reproducible website, documentation or published-build problem.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Chinese and English reports are welcome. This issue is public.
+        Use synthetic examples and remove credentials, personal details and unpublished research data.
+        For suspected vulnerabilities, follow [the security policy](https://github.com/SongHaoru-max/Chat-RefinedTPP/blob/main/SECURITY.md).
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Website
+        - Demonstration video
+        - Documentation
+        - Separately obtained application build
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Page or software version
+      description: Give the affected URL, or the application version and where you obtained it.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Provide minimal steps using synthetic data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser and operating system versions, device, and relevant application settings.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Redacted logs or screenshots
+      description: Optional evidence that is safe to share publicly.
+  - type: checkboxes
+    id: publication
+    attributes:
+      label: Before submitting
+      options:
+        - label: I removed credentials, personal data and unpublished research material from this public report.
+          required: true
+        - label: I have read the project's Code of Conduct.
+          required: true
