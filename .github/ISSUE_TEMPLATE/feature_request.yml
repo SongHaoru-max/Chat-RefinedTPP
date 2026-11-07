@@ -1,0 +1,45 @@
+name: Feature or accessibility request
+description: Suggest a focused improvement to the website, documentation or project.
+title: "[Request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Chinese and English suggestions are welcome. This issue is public.
+        Review the [Code of Conduct](https://github.com/SongHaoru-max/Chat-RefinedTPP/blob/main/CODE_OF_CONDUCT.md) and omit private or unpublished material.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Request area
+      options:
+        - Website
+        - Documentation
+        - Accessibility
+        - Scientific workflow
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or barrier
+      description: Describe the task and the difficulty you encountered.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Describe the smallest change that would help.
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: Acceptance criteria
+      description: How would we verify that the improvement works?
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Optional alternatives, relevant pages or safe-to-publish examples.
