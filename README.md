@@ -51,3 +51,5 @@ Public issues and pull requests are visible to everyone. Share small synthetic e
 ## Licensing
 
 A repository-wide license has not yet been selected. Licensing for website code, documentation, branding and video assets will be specified by the maintainer.
+
+See [third-party notices](THIRD_PARTY_NOTICES.md) for platform and production-tool acknowledgements and [video credits](assets/videos/CREDITS.md) for the published demo's music source. These notices preserve the separate upstream terms.
