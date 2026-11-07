@@ -53,4 +53,4 @@ The supplied certificate identifies a Pixabay track by Tunetank. Full public cre
 
 ## Project licensing
 
-Upstream works retain their own terms. The maintainer has not yet selected a repository-wide license for Chat-RefinedTPP's original website code and documentation or finalized reuse terms for its branding and film.
+Upstream works retain their own terms. Original website code and repository documentation use the [MIT License](LICENSE). The [logo policy](LOGO_LICENSE.md) and [video policy](assets/videos/LICENSE.md) specify separate permission requirements. [LICENSING.md](LICENSING.md) defines the scope. The complete platform-source and dependency licensing review is deferred until publication of the analysis application.

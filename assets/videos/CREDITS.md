@@ -34,4 +34,4 @@ The Pixabay terms allow combining content into a new creative work subject to th
 
 This record confirms the supplied music certificate and the reported production tools. Any additional sound effects, fonts, images or templates used in the production project still need their own source and license records. The rendered MP4 alone does not identify those production inputs.
 
-Reuse terms for the film and project branding remain pending maintainer confirmation.
+Film reuse follows the [video usage policy](LICENSE.md). Project branding follows the [logo usage policy](../../LOGO_LICENSE.md). Third-party media retains its applicable source terms.

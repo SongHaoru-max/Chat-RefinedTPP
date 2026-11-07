@@ -50,6 +50,6 @@ Public issues and pull requests are visible to everyone. Share small synthetic e
 
 ## Licensing
 
-A repository-wide license has not yet been selected. Licensing for website code, documentation, branding and video assets will be specified by the maintainer.
+Original website code and repository documentation are licensed under [MIT](LICENSE). The [logo](LOGO_LICENSE.md) and [video](assets/videos/LICENSE.md) have separate permission policies. Third-party material retains its applicable upstream terms. See [LICENSING.md](LICENSING.md) for scope and permission requests.
 
 See [third-party notices](THIRD_PARTY_NOTICES.md) for platform and production-tool acknowledgements and [video credits](assets/videos/CREDITS.md) for the published demo's music source. These notices preserve the separate upstream terms.

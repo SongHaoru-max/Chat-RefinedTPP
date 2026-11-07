@@ -25,7 +25,7 @@ Keep changes small enough to inspect. Preserve the project's developer attributi
 
 ## Licensing
 
-Check the repository's licensing status before proposing reuse or redistribution of its assets. Do not add a project-wide license, replace third-party notices, or change the licensing of media and branding without an explicit maintainer decision.
+Follow [LICENSING.md](LICENSING.md) when proposing reuse or redistribution. Contributions to original website code and repository documentation are submitted under the [MIT License](LICENSE), unless separately agreed with the maintainer. Logo, video and third-party asset contributions need their own provenance and permissions. Obtain an explicit maintainer decision before changing licensing scope or third-party notices.
 
 ## Conduct
 
