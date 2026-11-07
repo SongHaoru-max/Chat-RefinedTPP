@@ -75,8 +75,8 @@ dialog{background:var(--paper);border:1px solid var(--rule);border-radius:12px;w
 <div class="strip"><div class="wrap"><b>Project website</b><span>v0.4.2-fix3 Demo</span><span>v0.5.0 under validation</span><a href="#news">Read project updates ↗</a></div></div>
 
 <section class="section" id="demo"><div class="wrap media">
-<div><p class="eyebrow">01 / Demonstration</p><h2>See the local workspace</h2><p class="intro">The walkthrough will show how an experimental design becomes an analysis report in the local app.</p><p class="fine">The promotional video will be available here once published.</p></div>
-<div class="poster"><div><button aria-label="Demo video pending publication" disabled>▶</button><p>Chat-RefinedTPP walkthrough</p><span class="fine">Video pending publication</span></div></div>
+<div><p class="eyebrow">01 / Demonstration</p><h2>See the local workspace</h2><p class="intro">Watch the project introduction and a walkthrough of the local workspace.</p><p class="fine">89 seconds · 1080p · plays with sound when you start the video.</p></div>
+<div class="poster"><div><button aria-label="Play the Chat-RefinedTPP demo video" data-dialog="videoDialog">▶</button><p>Chat-RefinedTPP walkthrough</p><span class="fine">Watch the 89-second demo</span></div></div>
 </div></section>
 
 <section class="section" id="workflows"><div class="wrap">
@@ -150,6 +150,7 @@ dialog{background:var(--paper);border:1px solid var(--rule);border-radius:12px;w
 </main>
 <footer><div class="wrap"><span>Chat-RefinedTPP · Developed by Haoru Song (宋昊儒)</span><span><a href="#research">Citation</a> · <a href="#news">News</a> · <a href="https://github.com/SongHaoru-max/Chat-RefinedTPP">GitHub</a></span></div></footer>
 
+<dialog id="videoDialog" aria-labelledby="videoTitle"><button class="close" aria-label="Close">×</button><h2 id="videoTitle">Chat-RefinedTPP demo</h2><video id="demoVideo" controls playsinline preload="none"><source src="assets/videos/chat-refinedtpp-demo-89s.mp4" type="video/mp4">Your browser does not support embedded video. <a href="assets/videos/chat-refinedtpp-demo-89s.mp4">Open the demo video</a>.</video><p class="fine">89-second promotional demonstration of the local application.</p></dialog>
 <dialog id="downloadDialog" aria-labelledby="downloadTitle"><button class="close" aria-label="Close">×</button><h2 id="downloadTitle">v0.4.2-fix3 Demo</h2><p>The Demo installer is pending public release. A versioned download link will appear here when available.</p><p>On Windows, prepare Python 3.12.x, unpack the Demo, run <code>setup.bat</code> and then <code>start.bat</code>.</p></dialog>
 <dialog id="quickDialog" aria-labelledby="quickTitle"><button class="close" aria-label="Close">×</button><h2 id="quickTitle">Quick Start</h2><ol><li>Install the Python version required by your release.</li><li>Unpack the release and run the setup script.</li><li>Start the local app. Model configuration is optional for scientific analysis.</li><li>Describe the design, upload the required files, review the plan and confirm the run.</li></ol></dialog>
 <dialog id="devDialog" aria-labelledby="devTitle"><button class="close" aria-label="Close">×</button><h2 id="devTitle">Developer Guide</h2><p>The local backend supplies scoped Agent instructions and validated tools. Approved runs use fixed analysis code; reports read the resulting files and run metadata.</p><p>The published guide will link to source entry points for the Agent, execution, and reports.</p></dialog>
@@ -157,10 +158,19 @@ dialog{background:var(--paper);border:1px solid var(--rule);border-radius:12px;w
 <dialog id="subscribeDialog" aria-labelledby="subTitle"><button class="close" aria-label="Close">×</button><h2 id="subTitle">Subscribe to updates</h2><p>Email subscriptions will use a confirmation form when available. Submitting an address triggers a confirmation email; only a confirmed address joins the list. Sharing an institutional affiliation for the public chart will be optional. Each newsletter includes an unsubscribe link.</p><p>Email subscriptions are currently unavailable.</p></dialog>
 <script>
  for (const button of document.querySelectorAll('[data-dialog]')) {
-   button.addEventListener('click', () => document.getElementById(button.dataset.dialog).showModal());
+   button.addEventListener('click', () => {
+     const dialog = document.getElementById(button.dataset.dialog);
+     dialog.showModal();
+     const video = dialog.querySelector('video');
+     if (video) video.play().catch(() => {});
+   });
  }
  for (const dialog of document.querySelectorAll('dialog')) {
    dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+   dialog.addEventListener('close', () => {
+     const video = dialog.querySelector('video');
+     if (video) video.pause();
+   });
  }
 </script>
 </body>
