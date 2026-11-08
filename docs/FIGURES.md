@@ -1,6 +1,6 @@
 # Figure and screenshot preparation
 
-This is an asset brief, not a list of available image files. README image links will be added after the maintainer supplies or approves the images. Preferred delivery: an editable SVG/PDF plus a readable PNG; screenshots can be PNG. Use English labels for the main public README and identify the represented software version.
+The README uses the maintainer-supplied 1024×1024 PNG logo, displayed at 180×180, and a JPEG preview taken at 00:08 from the published promotional video. The logo follows the [logo policy](../LOGO_LICENSE.md); the frame follows the [video policy](../assets/videos/LICENSE.md). Architecture diagrams and application screenshots listed below are still pending. Preferred delivery: an editable SVG/PDF plus a readable PNG; screenshots can be PNG. Use English labels for the main public README and identify the represented software version.
 
 | Priority | Requested asset | Required content | Proposed future filename |
 | --- | --- | --- | --- |
@@ -8,7 +8,7 @@ This is an asset brief, not a list of available image files. README image links 
 | 1 | Scientific pipeline overview | Separate P2 and G2 paths, required inputs, raw-Rm CV QC, ΔRm/statistics and result units; retain G2 protein-reference matching and ambiguity | `docs/assets/p2-g2-workflows.png` |
 | 2 | Workspace screenshot | Actual accepted v0.5.0 task/input/review interface with safe sample data | `docs/assets/workspace-v0.5.0.png` |
 | 2 | Results/report screenshot | Actual QC/results and report history or source-linked evidence view | `docs/assets/results-v0.5.0.png` |
-| 3 | Standalone project logo | Approved brand artwork export; existing separate logo policy applies | `docs/assets/chat-refinedtpp-logo.png` |
+| Available | Project logo | Maintainer-supplied 1024×1024 PNG; original file preserved and existing separate logo policy applies | `docs/assets/chat-refinedtpp-logo.png` |
 | Later | Example-result panel | Approved dataset and exact version/configuration; label synthetic data when used | Determine with the example dataset |
 
 ## Content checks

@@ -1,5 +1,13 @@
 <div align="center">
 
+<img src="docs/assets/chat-refinedtpp-logo.png" width="180" height="180" alt="Chat-RefinedTPP logo">
+
+[![Version 0.5.0](https://img.shields.io/badge/Version-0.5.0-3b82f6)](docs/VERSIONS.md)
+[![Python 3.12 or newer for v0.5.0](https://img.shields.io/badge/Python-3.12%2B-3776ab?logo=python&logoColor=white)](docs/QUICKSTART.md)
+[![Supported pipelines P2 and G2](https://img.shields.io/badge/Pipelines-P2%20%2F%20G2-0f766e)](docs/ARCHITECTURE.md)
+[![Website and docs licensed under MIT](https://img.shields.io/badge/Website%20%26%20docs-MIT-64748b)](LICENSING.md)
+[![Refined-TPP method in JACS 2025](https://img.shields.io/badge/Method-JACS%202025-d97706)](https://doi.org/10.1021/jacs.5c08065)
+
 # Chat-RefinedTPP
 
 **An AI Agent–Assisted Processing and Analysis Platform for TMT-based Refined-TPP Quantitative Data**
@@ -19,6 +27,14 @@ A task-specific agent harness for experimental design, quality control, analysis
 Researchers review sample assignments, parameters and the analysis plan before execution. Fixed scientific programs perform the calculations; the Agent works through defined tools and does not choose arbitrary statistical methods or execute arbitrary code.
 
 > **Current status:** v0.5.0 is the maintainer-accepted current version. v0.4.2-fix3 is retained as the fixed Demo baseline. This public repository currently publishes the website and documentation; application source and installation archives are being withheld. No public application download is available yet.
+
+## ▶️ Demo
+
+[![Watch the 89-second Chat-RefinedTPP Demo video; preview shows quantitative evidence from the promotional film](docs/assets/demo-preview.jpg)](https://chat-refinedtpp.com/assets/videos/Chat-RefinedTPP-Demo-89s.mp4)
+
+**[▶ Play the 89-second video](https://chat-refinedtpp.com/assets/videos/Chat-RefinedTPP-Demo-89s.mp4)** · [View on the website](https://chat-refinedtpp.com/#demo)
+
+Click the preview to open the MP4 in your browser. The film illustrates the **v0.4.2-fix3 Demo** workflow; [version notes](docs/VERSIONS.md) describe changes in the accepted v0.5.0. The preview is a frame from the existing film, not a v0.5.0 application screenshot. [Video and preview usage terms](assets/videos/LICENSE.md) apply separately from the website/documentation MIT license.
 
 ## 🚀 Versions and getting started
 
