@@ -2,9 +2,9 @@
 
 ## Scope
 
-Security reports are welcome for the public Chat-RefinedTPP website, its published repository files and deployment behavior.
+Security reports are welcome for the public Chat-RefinedTPP website, its published repository files, platform documentation and deployment behavior.
 
-The analysis application source and installation packages are not currently distributed through this repository. Reports involving a separately obtained build should identify its version and source so the maintainer can establish the affected scope. No supported-version schedule has been published.
+The analysis application source and installation packages are not currently distributed through this repository. The maintainer has accepted v0.5.0 as the current version and retained v0.4.2-fix3 as the Demo baseline; see [version notes](docs/VERSIONS.md). Reports involving a separately obtained build should identify its exact version and source so the maintainer can establish the affected scope. Version acceptance is not a commitment to a security-support lifetime; no fixed supported-version schedule has been published.
 
 ## Report a vulnerability privately
 

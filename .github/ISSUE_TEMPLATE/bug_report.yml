@@ -24,7 +24,7 @@ body:
     id: version
     attributes:
       label: Page or software version
-      description: Give the affected URL, or the application version and where you obtained it.
+      description: Give the URL, or exact build (v0.5.0 current / v0.4.2-fix3 Demo) and where you obtained it. Public application downloads are not yet available here.
     validations:
       required: true
   - type: textarea
