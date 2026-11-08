@@ -1,6 +1,6 @@
 # Figure and screenshot preparation
 
-The README now uses an 80×80 WebP logo extracted unchanged from the existing website and a JPEG preview taken at 00:08 from the published promotional video. The logo follows the [logo policy](../LOGO_LICENSE.md); the frame follows the [video policy](../assets/videos/LICENSE.md). A higher-resolution logo can replace the small original when supplied. Architecture diagrams and application screenshots listed below are still pending. Preferred delivery: an editable SVG/PDF plus a readable PNG; screenshots can be PNG. Use English labels for the main public README and identify the represented software version.
+The README uses the maintainer-supplied 1024×1024 PNG logo, displayed at 180×180, and a JPEG preview taken at 00:08 from the published promotional video. The logo follows the [logo policy](../LOGO_LICENSE.md); the frame follows the [video policy](../assets/videos/LICENSE.md). Architecture diagrams and application screenshots listed below are still pending. Preferred delivery: an editable SVG/PDF plus a readable PNG; screenshots can be PNG. Use English labels for the main public README and identify the represented software version.
 
 | Priority | Requested asset | Required content | Proposed future filename |
 | --- | --- | --- | --- |
@@ -8,7 +8,7 @@ The README now uses an 80×80 WebP logo extracted unchanged from the existing we
 | 1 | Scientific pipeline overview | Separate P2 and G2 paths, required inputs, raw-Rm CV QC, ΔRm/statistics and result units; retain G2 protein-reference matching and ambiguity | `docs/assets/p2-g2-workflows.png` |
 | 2 | Workspace screenshot | Actual accepted v0.5.0 task/input/review interface with safe sample data | `docs/assets/workspace-v0.5.0.png` |
 | 2 | Results/report screenshot | Actual QC/results and report history or source-linked evidence view | `docs/assets/results-v0.5.0.png` |
-| 3 | Higher-resolution project logo | Replace the available 80×80 website export when an approved larger original is supplied; existing separate logo policy applies | Currently `docs/assets/chat-refinedtpp-logo.webp` |
+| Available | Project logo | Maintainer-supplied 1024×1024 PNG; original file preserved and existing separate logo policy applies | `docs/assets/chat-refinedtpp-logo.png` |
 | Later | Example-result panel | Approved dataset and exact version/configuration; label synthetic data when used | Determine with the example dataset |
 
 ## Content checks

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="docs/assets/chat-refinedtpp-logo.webp" width="80" height="80" alt="Chat-RefinedTPP logo">
+<img src="docs/assets/chat-refinedtpp-logo.png" width="180" height="180" alt="Chat-RefinedTPP logo">
 
 [![Version 0.5.0](https://img.shields.io/badge/Version-0.5.0-3b82f6)](docs/VERSIONS.md)
 [![Python 3.12 or newer for v0.5.0](https://img.shields.io/badge/Python-3.12%2B-3776ab?logo=python&logoColor=white)](docs/QUICKSTART.md)
